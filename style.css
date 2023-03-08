@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap');
+
+
+:root {
+  font-size: 14px;
+  --primary: rgba(0, 0, 0, 1);
+  --secondary: rgba(30, 30, 30, 1);
+  --text: #fff;
+  --dark: rgba(20, 20, 20, 0.7);
+  --light: #fff;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body.dark-theme {
+  --primary: #fff;
+  --secondary: #dfdfdf;
+  --text: #111;
+  --dark: #fff;
+  --light: rgba(20, 20, 20, 0.7);
+}
+
+body {
+  background: var(--primary);
+  color: var(--text);
+  font-family: "Poppins", Sans-Serif;
+  transition: all 0.3s ease;
+}
+
+section#content {
+  min-height: 100vh;
+  height: 100%;
+}
+
+.container {
+  margin: auto;
+  width: 90%;
+  max-width: 700px;
+  overflow: hidden;
+}
+
+div.dark {
+  background: var(--secondary);
+}
+
+header {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+header i {
+  font-size: 1.6rem;
+  opacity: 0.9;
+}
+
+.pass-div {
+  position: relative;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--secondary);
+  margin: 1rem 0;
+  border-radius: 3px;
+  padding: 0.3rem;
+}
+
+.pass-div h2 {
+  font-size: 1.35rem;
+  opacity: 0.9;
+  letter-spacing: 1px;
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.pass-div i {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.6rem;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.pass-div i:hover {
+  opacity: 1;
+}
+
+.pass-indicator {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.8rem;
+  background: crimson;
+  color: #fff;
+  margin-bottom: 1rem;
+  border-radius: 3px;
+}
+
+.pass-indicator.weak {
+  background: crimson;
+}
+
+.pass-indicator.medium {
+  background: yellow;
+  color: #111;
+}
+
+.pass-indicator.strong {
+  background: green;
+}
+
+section > div {
+  margin: 0.5rem 0;
+  padding: 1rem 0.6rem;
+  border-radius: 3px;
+}
+
+section.container > div span {
+  font-size: 1rem;
+  display: inline-block;
+}
+
+section .custom p {
+  font-size: 1.1rem;
+  padding: 0.8rem 0;
+  font-weight: 600;
+  font-family: "Roboto", Sans-Serif;
+}
+
+.strength span{
+   display: block;
+   margin-bottom: 0.4rem;
+}
+
+.strength .input-box {
+  display: flex;
+  align-items: center;
+}
+
+.strength input {
+  width: 90%;
+}
+
+.strength span {
+  margin-left: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.pass-rule {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pass-rule label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.8rem;
+  width: 1.8rem;
+  background: var(--light);
+  border-radius: 50%;
+}
+
+.pass-rule label i {
+  font-size: 1.5rem;
+  color: var(--dark);
+  display: none;
+}
+
+.pass-rule input[type=checkbox] {
+  display: none;
+}
+
+.pass-rule input:checked + label {
+  opacity: 0.8;
+}
+
+.pass-rule input:checked + label i {
+  display: block;
+}
+
+.pass-rule .lowercase {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+button {
+  border: none;
+  width: 100%;
+  padding: 1.4rem 0;
+  margin: .5rem 0;
+  border-radius: 4px;
+  background: #103f88;
+  color: #fff;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(0.97);
+}
+
+footer {
+  margin-top: 1.3rem;
+  padding: 1rem 0;
+}
+
+footer p {
+  opacity: 0.8;
+  color: var(--text);
+  text-align: center;
+}
